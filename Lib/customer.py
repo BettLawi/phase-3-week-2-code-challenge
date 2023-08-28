@@ -1,4 +1,4 @@
-# from review import Review
+from review import Review
 
 class Customer:
 
@@ -23,4 +23,14 @@ class Customer:
     def all(cls):
         return cls.all_customers
     
-           
+    # Object Relationship Methods
+    def restaurant(self):
+        reviewed_restaurants = set()
+        for review in self.reviews:
+            reviewed_restaurants.add(review.customer())
+        return list(reviewed_restaurants)
+
+    def add_review(self,restaurant,rating):
+        self.reviews.append(Review(self, restaurant=restaurant, rating=rating))
+
+

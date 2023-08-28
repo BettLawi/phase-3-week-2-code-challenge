@@ -14,4 +14,11 @@ class Review:
     def all(cls):
         return cls.all_reviews 
 
+    # Object Relationship Methods    
+    def customer(self):
+        return self._customer
+
+    def restaurant(self):
+        self._restaurant    
+
 
