@@ -33,4 +33,19 @@ class Customer:
     def add_review(self,restaurant,rating):
         self.reviews.append(Review(self, restaurant=restaurant, rating=rating))
 
+    # Aggregate and association methods    
+    def num_reviews(self):
+        return len(self.reviews)
+
+    @classmethod
+    def find_by_name(cls, full_name):
+        for customer in cls.customers:
+            if customer.full_name == name:
+                return customer
+        return None        
+
+    @classmethod
+    def find_all_by_given_name(cls, given_name):
+        return [customer.given_name for customer in cls.customers if customer.given_name == name]
+
 
