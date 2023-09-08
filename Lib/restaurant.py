@@ -25,5 +25,8 @@ class Restaurant:
             rating_sum += review.rating
         return (rating_sum / len(Review.reviews))
 
-
-
+#Example
+restaurant = Restaurant('Burgers')
+print(restaurant.name) # Output: Burgers
+#attempt to change will bring error
+restaurant.name = "fries"# attribute error

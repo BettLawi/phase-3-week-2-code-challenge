@@ -1,3 +1,6 @@
+from customer import Customer
+from restaurant import Restaurant
+
 class Review: 
     all_reviews = []
 
@@ -20,5 +23,7 @@ class Review:
 
     def restaurant(self):
         self._restaurant    
+
+ 
 
 
